@@ -12,7 +12,7 @@ db_wanted = {}
 
 def search_file():
     file_list = []
-    os.chdir("C:/Users/kdoub/Desktop/coding/Python/Job_Scraper/file")
+    # os.chdir("C:/Users/kdoub/Desktop/coding/Python/Job_Scraper/file")
     files = os.listdir()
     for file in files:
         file_name = os.path.splitext(file)[0]
@@ -24,7 +24,7 @@ def search_file():
 
 
 def get_from_db():
-    os.chdir("C:/Users/kdoub/Desktop/coding/Python/Job_Scraper/file")
+    # os.chdir("C:/Users/kdoub/Desktop/coding/Python/Job_Scraper/file")
     files = os.listdir()
     for file in files:
         filename = os.path.splitext(file)[0]

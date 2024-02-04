@@ -2,8 +2,12 @@ from flask import Flask, render_template, request, redirect, send_file
 from file import save_to_file, keyword_db
 from scraper import scrape, rescrape
 from db import get_from_db, search_file
+import os
 
 app = Flask(__name__)
+
+print(os.getcwd())
+os.chdir("file")
 
 
 @app.route("/")
