@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Scrapper</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Job Scrapper</h1>
+      <h4>Hello {{name}}!</h4>
+      <h4>What job do you want?</h4>
+      <form action="/search">
+        <input
+          type="text"
+          name="keyword"
+          placeholder="Write keyword"
+          required
+        />
+        <select name="site" required>
+          <option value="">Select a website...</option>
+          <option value="berlinstartupjobs">berlinstartupjovs.com</option>
+          <option value="weworkremotely">weworkremotely.com</option>
+          <option value="web3">web3.career</option>
+          <option value="wanted">wanted.co.kr</option>
+        </select>
+        <button>Search</button>
+      </form>
+      <a href="/updates">What's New?</a>
+      <table role="grid">
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Website</th>
+            <th>Last Updated</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for file in files %}
+          <tr>
+            <td>{{file[0]}}</td>
+            <td>{{file[1]}}</td>
+            <td>{{file[2]}}</td>
+            <td>
+              <a href="/search?keyword={{file[0]}}&site={{file[1]}}"
+                >Quick Search&rarr;</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

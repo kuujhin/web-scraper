@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Scrapper</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <hgroup>
+        <h1>What's New?</h1>
+        <br />
+        <a href="/">Back</a>
+      </hgroup>
+      <figure>
+        <table role="grid">
+          <thead>
+            <tr>
+              <th>Updated Time</th>
+              <th>Feature</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2024-02-03</td>
+              <td>Show Error When Result is Empty</td>
+              <td>
+                검색결과가 없을 경우 빈 테이블을 출력했었는데, 따로 페이지를
+                만들어 결과가 없다고 확실하게 알 수 있도록 하였다.
+              </td>
+            </tr>
+            <tr>
+              <td>2024-02-03</td>
+              <td>Show CSV Files on the Main Page</td>
+              <td>
+                현재 저장된 CSV파일에서 키워드, 사이트, 파일 수정 시간을 가져와
+                메인 화면에 보여주었다. 검색기록 기능을 함과 동시에 바로 검색
+                결과 화면으로 이동할 수 있는 링크도 각각 달아주었다.
+              </td>
+            </tr>
+            <tr>
+              <td>2024-02-03</td>
+              <td>Add Update Feature</td>
+              <td>
+                CSV파일에서 정보를 가져오기 때문에 과거에 scrape한 정보들이
+                들어있다. 따라서 검색 결과 화면에서 Update 기능을 추가하여 새로
+                scrape하여 csv파일에 정보들을 업데이트 하게 해주었다.
+              </td>
+            </tr>
+            <tr>
+              <td>2024-02-03</td>
+              <td>Real-time Connection Between CSV File and DB</td>
+              <td>
+                검색하면 자동으로 csv파일로 저장하게 하였다. 이후 사이트 메인
+                화면으로 올 시 csv파일들에서 정보를 가져와 db 리스트에
+                저장하였다. 새로 검색하거나 업데이트 한 경우에도 적용된다.
+                따라서 새로 페이지를 열어도 과거에 검색했던 적이 있다면
+                scrape하지 않고 바로 db에서 정보를 빠르게 가져온다.
+              </td>
+            </tr>
+            <tr>
+              <td>2024-02-01</td>
+              <td>Use OOP</td>
+              <td>Job과 Jobs Class를 이용했다 .</td>
+            </tr>
+            <tr>
+              <td>2024-02-01</td>
+              <td>Search From Selected Website</td>
+              <td>
+                Select Tag를 이용하여 웹사이트를 선택하면 해당 사이트에서 입력한
+                키워드로 검색하여 콘텐츠를 가져왔다.
+              </td>
+            </tr>
+            <tr>
+              <td>2024-02-01</td>
+              <td>Add Dynamic Scrape Function</td>
+              <td>
+                강의에서 배운 wanted.co.kr 사이트에서 dynamic하게 scrape하는
+                함수를 추가하였다. headless가 False인 상태라 확인 가능하다.
+              </td>
+            </tr>
+            <tr>
+              <td>2024-02-01</td>
+              <td>Scrape From Each Website</td>
+              <td>
+                각 사이트에서 scrape하는 함수들을 만들었다. 직업들의 정보가
+                사이트마다 달라서 공통적인 Title, Company, Link는 유지하고
+                나머지 정보들을 Description 속성에 저장했다.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h1>What I Want To Do...</h1>
+      <table role="grid">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Design</td>
+            <td>
+              그나마 Pico 덕분에 이정도..? 백엔드 강좌이니 크게 신경쓰지 않았다.
+            </td>
+          </tr>
+          <tr>
+            <td>File Sort</td>
+            <td>
+              메인 화면에 나오게한 CSV파일 리스트를 수정시간이나 마지막으로
+              열어본 시간 기준으로 정렬하면 검색 기록으로서의 역할을 더 잘 해줄
+              것이다.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
